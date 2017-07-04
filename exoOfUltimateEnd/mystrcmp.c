@@ -1,27 +1,22 @@
-#include <unistd.h>
-int my_strlen1(const char str1[])
-{
-        int i = 0 ;
-        while (str1[i] != '\0')
-        {
-        i++;
-        }
-        return i;
-}
-int my_strlen2(const char str2[])
-{
-        int y=0;
-        while(str2[y] != '\0')
-{
-        y++;
-}
-        return y;
-}
 int mystrcmp (const char str1[],const char str2[])
 {
-        my_strlen1(str1);
-        my_strlen2(str2);
-        int a = my_strlen1(str1);
-        int b = my_strlen2(str2);
-        return (a-b);
+
+	int i ;
+	i = 0 ;
+	while ( str1[i] == str2[i])
+	{
+		if ( str1[i]==0 || str2[i]==0 )
+		{
+			return(0);
+		}
+
+		i++;
+	}
+	int x = str1[i];
+	int y = str2[i];
+
+	return(x-y);
 }
+
+
+
